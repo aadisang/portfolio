@@ -1,15 +1,14 @@
 import type { SocialProfile } from "@/types/profile";
 
-export default function SocialLink({ name, icon: Icon, url }: SocialProfile) {
+export default function SocialLink({ name, url }: SocialProfile) {
 	return (
 		<a
 			href={url}
 			target="_blank"
 			rel="noreferrer noopener"
-			aria-label={`${name} (opens in new tab)`}
-			className="link-muted focus-ring press-scale"
+			className="text-sm link-muted focus-ring"
 		>
-			<Icon className="size-5" aria-hidden="true" />
+			{name}
 		</a>
 	);
 }

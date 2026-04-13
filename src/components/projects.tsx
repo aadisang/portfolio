@@ -1,4 +1,3 @@
-import { ArrowUpRightIcon } from "@phosphor-icons/react/dist/icons/ArrowUpRight";
 import type { ProjectLink } from "@/types/profile";
 
 type ProjectsProps = {
@@ -20,10 +19,16 @@ export default function Projects({ items }: ProjectsProps) {
 							<span className="text-foreground hover-underline">
 								{project.name}
 							</span>
-							<ArrowUpRightIcon
+							<svg
+								viewBox="0 0 256 256"
 								className="size-3.5 text-muted-foreground hover-slide-in"
 								aria-hidden="true"
-							/>
+							>
+								<path
+									fill="currentColor"
+									d="M200 64v104a8 8 0 0 1-16 0V83.31L69.66 197.66a8 8 0 0 1-11.32-11.32L172.69 72H88a8 8 0 0 1 0-16h104a8 8 0 0 1 8 8"
+								/>
+							</svg>
 						</div>
 						<p className="mt-1 text-sm text-muted-foreground sm:line-clamp-2">
 							{project.description}

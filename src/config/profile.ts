@@ -1,6 +1,3 @@
-import { GithubLogoIcon } from "@phosphor-icons/react/dist/icons/GithubLogo";
-import { LinkedinLogoIcon } from "@phosphor-icons/react/dist/icons/LinkedinLogo";
-import { XLogoIcon } from "@phosphor-icons/react/dist/icons/XLogo";
 import type { ProfileContent } from "@/types/profile";
 
 export const profileContent: ProfileContent = {
@@ -56,17 +53,14 @@ export const profileContent: ProfileContent = {
 	socialProfiles: [
 		{
 			name: "GitHub",
-			icon: GithubLogoIcon,
 			url: "https://github.com/sinarck",
 		},
 		{
 			name: "LinkedIn",
-			icon: LinkedinLogoIcon,
 			url: "https://linkedin.com/in/aadisanghvi",
 		},
 		{
 			name: "X",
-			icon: XLogoIcon,
 			url: "https://x.com/aadisanghv",
 		},
 	],

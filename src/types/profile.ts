@@ -1,5 +1,3 @@
-import type { Icon } from "@phosphor-icons/react";
-
 export type WorkExperience = {
 	company: string;
 	role: string;
@@ -17,7 +15,6 @@ export type ProjectLink = {
 
 export type SocialProfile = {
 	name: string;
-	icon: Icon;
 	url: string;
 };
 
