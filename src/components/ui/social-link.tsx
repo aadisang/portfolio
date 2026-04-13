@@ -9,7 +9,7 @@ export default function SocialLink({ name, icon: Icon, url }: SocialProfile) {
 			aria-label={`${name} (opens in new tab)`}
 			className="link-muted focus-ring press-scale"
 		>
-			<Icon className="size-20px" aria-hidden="true" />
+			<Icon className="size-5" aria-hidden="true" />
 		</a>
 	);
 }
