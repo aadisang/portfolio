@@ -10,10 +10,17 @@ export const profileContent: ProfileContent = {
 	contactEmail: import.meta.env.VITE_CONTACT_EMAIL,
 	workExperience: [
 		{
+			company: "Palantir",
+			role: "Meritocracy Fellow",
+			startDate: "Aug 2026",
+			endDate: "Dec 2026",
+			description: "Software engineer intern.",
+			logoUrl: "/work/palantir.svg",
+		},
+		{
 			company: "Spare Studio",
 			role: "Founder",
 			startDate: "Aug 2024",
-			endDate: "Present",
 			description: "Freelance web development.",
 			logoUrl: "/work/spare-studio.svg",
 		},
