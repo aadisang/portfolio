@@ -20,7 +20,7 @@ export default function Experiences({ items }: ExperiencesProps) {
 						height={40}
 						loading="lazy"
 						decoding="async"
-						className="size-10 rounded object-contain row-span-2"
+						className="size-10 rounded object-contain row-span-2 select-none pointer-events-none"
 					/>
 					<div className="min-w-0 flex items-center gap-2 self-end">
 						<span className="text-foreground leading-none">

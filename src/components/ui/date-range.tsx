@@ -12,7 +12,7 @@ export default function DateRange({ startDate, endDate }: DateRangeProps) {
 	const end = endDate ? formatDate(endDate) : "Present";
 
 	return (
-		<div className="hidden sm:grid grid-cols-[1fr_auto_1fr] items-center gap-1.5 text-xs tabular-nums leading-none">
+		<div className="hidden sm:grid grid-cols-[1fr_auto_1fr] items-center gap-1.5 text-xs tabular-nums leading-none select-none">
 			<span className="text-muted-foreground text-center px-1.5 py-1 rounded bg-foreground/4">
 				{formatDate(startDate)}
 			</span>
