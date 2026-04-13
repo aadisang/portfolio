@@ -20,14 +20,14 @@
 }
 
 :root {
-    --background: #0a0a0a;
-    --foreground: #fafafa;
-    --muted-foreground: #a1a1a1;
-    --border: #262626;
-    --ring: #525252;
+    --background: #111110;
+    --foreground: #eeeeec;
+    --muted-foreground: #7c7b74;
+    --border: #222221;
+    --ring: #494844;
     --hover-overlay: #ffffff08;
     --selection-background: #d6d3d1;
-    --selection-foreground: #0a0a0a;
+    --selection-foreground: #111110;
 }
 
 @layer base {
