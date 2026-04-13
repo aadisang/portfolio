@@ -11,6 +11,7 @@
 		"lint": "vp lint",
 		"lint:fix": "vp lint --fix",
 		"check": "vp check",
+		"typecheck": "tsgo --noEmit",
 		"prepare": "vp config"
 	},
 	"dependencies": {
