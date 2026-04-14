@@ -17,3 +17,6 @@ export const siteMetadata = {
 	robots:
 		"index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
 } as const;
+
+export const formatTitle = (page?: string) =>
+	page ? `${page} | ${siteMetadata.name}` : siteMetadata.name;
