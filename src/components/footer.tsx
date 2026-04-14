@@ -15,7 +15,10 @@ export default function Footer({ socialProfiles, contactEmail }: FooterProps) {
 					href={`mailto:${contactEmail}`}
 					className="text-sm link-muted focus-ring"
 				>
-					{contactEmail.replace("@", " [at] ").replace(/\./g, " [dot] ")}
+					<span className="sm:hidden">Email</span>
+					<span className="hidden sm:inline">
+						{contactEmail.replace("@", " [at] ").replace(/\./g, " [dot] ")}
+					</span>
 				</a>
 				<nav aria-label="Social links" className="flex items-center gap-4">
 					{socialProfiles.map((socialProfile) => (
