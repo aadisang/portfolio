@@ -1,4 +1,5 @@
 import DateRange from "@/components/ui/date-range";
+import RoleBadge from "@/components/ui/role-badge";
 import type { WorkExperience } from "@/types/profile";
 
 type ExperiencesProps = {
@@ -26,9 +27,7 @@ export default function Experiences({ items }: ExperiencesProps) {
 						<span className="text-foreground leading-none">
 							{experience.company}
 						</span>
-						<span className="text-xs text-muted-foreground px-2 py-0.5 rounded-full bg-foreground/6 leading-none select-none">
-							{experience.role}
-						</span>
+						<RoleBadge role={experience.role} />
 					</div>
 					<DateRange {...experience} />
 					<p className="col-start-2 col-span-2 self-start mt-1 text-sm text-muted-foreground sm:line-clamp-2">
