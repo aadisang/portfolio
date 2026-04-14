@@ -4,7 +4,7 @@ export const siteMetadata = {
 	origin: import.meta.env.VITE_SITE_URL,
 	name: "Aadi Sanghvi",
 	title: "Aadi Sanghvi",
-	description: profileContent.headline,
+	description: profileContent.headline.map((seg) => seg.text).join(""),
 	twitterHandle: "@aadisanghvii",
 	locale: "en_US",
 	socialImage: {

@@ -18,9 +18,16 @@ export type SocialProfile = {
 	url: string;
 };
 
+import type { FileRouteTypes } from "@/routeTree.gen";
+
+export type HeadlineSegment = {
+	text: string;
+	to?: FileRouteTypes["to"];
+};
+
 export type ProfileContent = {
 	name: string;
-	headline: string;
+	headline: HeadlineSegment[];
 	contactEmail: string;
 	workExperience: WorkExperience[];
 	projects: ProjectLink[];
