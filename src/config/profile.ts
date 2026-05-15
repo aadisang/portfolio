@@ -6,7 +6,7 @@ export const profileContent: ProfileContent = {
 		{
 			text: "I'm a student and super enthusiastic about tech. You'll find me working on whatever I find interesting at the moment and occasionally, ",
 		},
-		{ text: "writing", to: "/writing" },
+		{ text: "writing" },
 		{ text: "." },
 	],
 	contactEmail: import.meta.env.VITE_CONTACT_EMAIL,
