@@ -40,13 +40,13 @@ export const profileContent: ProfileContent = {
 			name: "Open Attendance",
 			description:
 				"An open-source attendance system for every kind of event. Think club meetings, coffee mixers, etc. (500+ users, including my school).",
-			url: "https://github.com/sinarck/open-attendance",
+			url: "https://github.com/aadisang/open-attendance",
 		},
 		{
 			name: "Hand Wave",
 			description:
 				"A simple real-time ASL translation app built with the Ray-Ban Meta glasses. Presented to students at the Texas School for the Deaf.",
-			url: "https://github.com/sinarck/hand-wave",
+			url: "https://github.com/aadisang/hand-wave",
 		},
 		{
 			name: "Storm Shield",
@@ -58,7 +58,7 @@ export const profileContent: ProfileContent = {
 	socialProfiles: [
 		{
 			name: "GitHub",
-			url: "https://github.com/sinarck",
+			url: "https://github.com/aadisang",
 		},
 		{
 			name: "LinkedIn",
