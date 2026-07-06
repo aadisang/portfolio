@@ -16,14 +16,14 @@ export const profileContent: ProfileContent = {
 			role: "Meritocracy Fellow",
 			startDate: "Aug 2026",
 			endDate: "Dec 2026",
-			description: "Software engineer intern.",
+			description: "Forward Deployed Engineer intern",
 			logoUrl: "/work/palantir.svg",
 		},
 		{
 			company: "Spare Studio",
 			role: "Founder",
 			startDate: "Aug 2024",
-			description: "Freelance web development.",
+			description: "Freelance development",
 			logoUrl: "/work/spare-studio.svg",
 		},
 		{
@@ -31,7 +31,7 @@ export const profileContent: ProfileContent = {
 			role: "Junior Software Engineer",
 			startDate: "Jan 2024",
 			endDate: "Dec 2025",
-			description: "Pet salon management startup.",
+			description: "Pet salon management startup",
 			logoUrl: "/work/doastly.svg",
 		},
 	],
@@ -45,14 +45,14 @@ export const profileContent: ProfileContent = {
 		{
 			name: "Hand Wave",
 			description:
-				"A simple real-time ASL translation app built with the Ray-Ban Meta glasses. Presented to students at the Texas School for the Deaf.",
+				"A simple real-time ASL translation app built with an MiCT-based model. Presented to NBC and the Texas School for the Deaf.",
 			url: "https://github.com/aadisang/hand-wave",
 		},
 		{
 			name: "Storm Shield",
 			description:
 				"A mobile app streamlining volunteer coordination and recruitment for organizations, such as in disaster-response scenarios. Got to demo at the U.S. Capitol and to my congressman (Rep. Self).",
-			url: "https://www.stormshield.app",
+			url: "https://apps.apple.com/us/app/storm-shield-volunteer/id6744670006",
 		},
 	],
 	socialProfiles: [

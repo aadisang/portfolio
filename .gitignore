@@ -27,6 +27,9 @@ Thumbs.db
 # TanStack
 .tanstack/
 
+# Content Collections
+.content-collections/
+
 # Vite
 .vite/
 .vite-hooks/
