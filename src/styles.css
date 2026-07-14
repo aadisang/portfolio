@@ -139,17 +139,17 @@
         }
     }
 
+    /*
+     * Hidden states live in the keyframe `from` + backwards fill, so nothing
+     * (blur(0), translateZ, will-change layers) is held after entry — a
+     * `forwards` fill kept every element on a filtered compositor layer for
+     * the life of the page, which made backgrounds shimmer on repaint.
+     */
     @keyframes fade-in-up {
         from {
             opacity: 0;
             transform: translate3d(0, 8px, 0);
             filter: blur(4px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translate3d(0, 0, 0);
-            filter: blur(0);
         }
     }
 
@@ -157,18 +157,10 @@
         from {
             transform: scaleX(0);
         }
-
-        to {
-            transform: scaleX(1);
-        }
     }
 
-	.enter {
-		opacity: 0;
-		will-change: transform, filter, opacity;
-		backface-visibility: hidden;
-		transform: translateZ(0);
-		animation: fade-in-up 0.6s var(--ease-out) forwards;
+    .enter {
+        animation: fade-in-up 0.6s var(--ease-out) backwards;
         animation-delay: calc(
             var(--enter-base, 0ms) + var(--enter-step, 0) * 60ms
         );
@@ -176,8 +168,7 @@
 
     .enter-grow-x {
         transform-origin: left;
-        transform: scaleX(0);
-        animation: grow-x 0.6s var(--ease-out) forwards;
+        animation: grow-x 0.6s var(--ease-out) backwards;
         animation-delay: calc(
             var(--enter-base, 0ms) + var(--enter-step, 0) * 60ms
         );

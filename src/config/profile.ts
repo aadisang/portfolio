@@ -46,7 +46,7 @@ export const profileContent: ProfileContent = {
 			name: "Hand Wave",
 			description:
 				"A simple real-time ASL translation app built with an MiCT-based model. Presented to NBC and the Texas School for the Deaf.",
-			url: "https://github.com/aadisang/hand-wave",
+			url: "https://handwave.sh",
 		},
 		{
 			name: "Storm Shield",
