@@ -123,7 +123,7 @@ function HomePage() {
 	return (
 		<main
 			id="main-content"
-			className="page-stagger max-w-2xl lg:max-w-3xl mx-auto px-6 min-h-dvh flex flex-col justify-center pt-12 pb-8 lg:py-8"
+			className="max-w-2xl lg:max-w-3xl mx-auto px-6 min-h-dvh flex flex-col justify-center pt-12 pb-8 lg:py-8"
 		>
 			<Header displayName={profile.name} headline={profile.headline} />
 

@@ -6,7 +6,7 @@ export default function SocialLink({ name, url }: SocialProfile) {
 			href={url}
 			target="_blank"
 			rel="noreferrer noopener"
-			className="text-sm link-muted focus-ring"
+			className="inline-flex min-h-11 items-center text-sm link-muted press-scale focus-ring"
 		>
 			{name}
 		</a>

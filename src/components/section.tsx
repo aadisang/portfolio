@@ -7,8 +7,8 @@ type SectionProps = {
 
 export default function Section({ label, children }: SectionProps) {
 	return (
-		<section className="mb-10 lg:mb-8 enter-group">
-			<h2 className="text-xs uppercase tracking-wider text-muted-foreground mb-4 enter">
+		<section className="mb-10 lg:mb-8">
+			<h2 className="text-xs uppercase tracking-wider text-muted-foreground mb-4">
 				{label}
 			</h2>
 			{children}

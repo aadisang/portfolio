@@ -8,11 +8,11 @@ type ExperiencesProps = {
 
 export default function Experiences({ items }: ExperiencesProps) {
 	return (
-		<ul className="grid grid-cols-[2.5rem_1fr_auto] gap-x-4 gap-y-6 enter-list">
+		<ul className="grid grid-cols-[2.5rem_1fr_auto] gap-x-4 gap-y-6">
 			{items.map((experience) => (
 				<li
 					key={`${experience.company}:${experience.startDate}`}
-					className="grid grid-cols-subgrid col-span-full enter"
+					className="grid grid-cols-subgrid col-span-full"
 				>
 					<img
 						src={experience.logoUrl}
@@ -30,7 +30,7 @@ export default function Experiences({ items }: ExperiencesProps) {
 						<RoleBadge role={experience.role} />
 					</div>
 					<DateRange {...experience} />
-					<p className="col-start-2 col-span-2 self-start mt-1 text-sm text-muted-foreground sm:line-clamp-2">
+					<p className="col-start-2 col-span-2 self-start mt-1 text-sm leading-relaxed text-pretty text-muted-foreground sm:line-clamp-2">
 						{experience.description}
 					</p>
 				</li>

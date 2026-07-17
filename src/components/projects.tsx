@@ -6,14 +6,14 @@ type ProjectsProps = {
 
 export default function Projects({ items }: ProjectsProps) {
 	return (
-		<ul className="-mx-3 space-y-1 enter-list">
+		<ul className="-mx-3 space-y-1">
 			{items.map((project) => (
-				<li key={`${project.name}:${project.url}`} className="enter">
+				<li key={`${project.name}:${project.url}`}>
 					<a
 						href={project.url}
 						target="_blank"
 						rel="noreferrer noopener"
-						className="group block px-3 py-3 transition-colors duration-200 ease-out pointer-fine:hover:bg-(--hover-overlay) focus-ring"
+						className="group block px-3 py-3 transition-colors duration-150 ease-[ease] active:bg-(--hover-overlay) pointer-fine:hover:bg-(--hover-overlay) focus-ring"
 					>
 						<div className="flex items-center gap-1.5">
 							<span className="text-foreground hover-underline">
@@ -30,7 +30,7 @@ export default function Projects({ items }: ProjectsProps) {
 								/>
 							</svg>
 						</div>
-						<p className="mt-1 text-sm text-muted-foreground sm:line-clamp-2">
+						<p className="mt-1 text-sm leading-relaxed text-pretty text-muted-foreground sm:line-clamp-2">
 							{project.description}
 						</p>
 					</a>

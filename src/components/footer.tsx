@@ -8,12 +8,12 @@ type FooterProps = {
 
 export default function Footer({ socialProfiles, contactEmail }: FooterProps) {
 	return (
-		<footer className="enter-group">
-			<hr className="border-border origin-left enter-grow-x" />
-			<div className="flex items-center justify-between pt-10 lg:pt-8 enter">
+		<footer>
+			<hr className="border-border" />
+			<div className="flex items-center justify-between pt-10 lg:pt-8">
 				<a
 					href={`mailto:${contactEmail}`}
-					className="text-sm link-muted focus-ring"
+					className="inline-flex min-h-11 items-center text-sm link-muted press-scale focus-ring"
 				>
 					<span className="sm:hidden">Email</span>
 					<span className="hidden sm:inline">
