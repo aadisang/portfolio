@@ -1,0 +1,13 @@
+{
+	"headers": [
+		{
+			"source": "/",
+			"headers": [
+				{
+					"key": "Link",
+					"value": "</llms.txt>; rel=\"alternate\"; type=\"text/plain\"; title=\"Portfolio summary for agents\""
+				}
+			]
+		}
+	]
+}

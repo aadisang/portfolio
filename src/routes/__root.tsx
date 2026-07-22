@@ -39,6 +39,12 @@ export const Route = createRootRoute({
 		],
 		links: [
 			{
+				rel: "alternate",
+				href: "/llms.txt",
+				type: "text/plain",
+				title: "Portfolio summary for agents",
+			},
+			{
 				rel: "preload",
 				href: "/fonts/Satoshi-Variable.woff2",
 				as: "font",
