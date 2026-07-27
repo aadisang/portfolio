@@ -57,10 +57,10 @@ export const Route = createRootRoute({
 		styles: [
 			{
 				children: `@font-face {
-	font-family: "Satoshi";
+	font-family: "Satoshi Web";
 	src: url("/fonts/Satoshi-Variable.woff2") format("woff2");
 	font-weight: 300 900;
-	font-display: swap;
+	font-display: optional;
 }`,
 			},
 		],
