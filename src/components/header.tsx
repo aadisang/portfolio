@@ -12,7 +12,7 @@ export default function Header({ displayName, headline }: HeaderProps) {
 			<h1 className="text-base font-semibold tracking-tight text-pretty">
 				{displayName}
 			</h1>
-			<p className="mt-3 max-w-[65ch] text-balance text-muted-foreground">
+			<p className="mt-3 text-pretty text-muted-foreground">
 				{headline.map((seg) =>
 					seg.to ? (
 						<Link
