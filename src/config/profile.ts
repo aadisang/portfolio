@@ -13,16 +13,16 @@ export const profileContent: ProfileContent = {
 	workExperience: [
 		{
 			company: "Palantir",
-			role: "Meritocracy Fellow",
+			role: "Forward Deployed Engineer",
 			startDate: "Aug 2026",
-			endDate: "Dec 2026",
-			description: "Forward Deployed Engineer intern",
+			description: "Commercial",
 			logoUrl: "/work/palantir.svg",
 		},
 		{
 			company: "Spare Studio",
 			role: "Founder",
 			startDate: "Aug 2024",
+   endDate: "Aug 2026",
 			description: "Freelance development",
 			logoUrl: "/work/spare-studio.svg",
 		},
