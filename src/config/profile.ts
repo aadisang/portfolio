@@ -4,7 +4,9 @@ export const profileContent: ProfileContent = {
 	name: "Aadi Sanghvi",
 	headline: [
 		{
-			text: "I'm a student and super enthusiastic about tech. You'll find me working on whatever I find interesting at the moment and occasionally, ",
+			text: "I'm an engineer who likes building things and figuring out how they work. Usually working on whatever interests me, and occasionally, ",
+			mobileText:
+				"I'm an engineer building whatever interests me, and occasionally, ",
 		},
 		{ text: "writing" },
 		{ text: "." },
@@ -15,14 +17,14 @@ export const profileContent: ProfileContent = {
 			company: "Palantir",
 			role: "Forward Deployed Engineer",
 			startDate: "Aug 2026",
-			description: "Commercial",
+			description: "Commercial deployment",
 			logoUrl: "/work/palantir.svg",
 		},
 		{
 			company: "Spare Studio",
 			role: "Founder",
 			startDate: "Aug 2024",
-   endDate: "Aug 2026",
+			endDate: "Aug 2026",
 			description: "Freelance development",
 			logoUrl: "/work/spare-studio.svg",
 		},
@@ -40,18 +42,24 @@ export const profileContent: ProfileContent = {
 			name: "Open Attendance",
 			description:
 				"An open-source attendance system for every kind of event. Think club meetings, coffee mixers, etc. (500+ users, including my school).",
+			mobileDescription:
+				"Open-source event attendance, used by 500+ people, including my school.",
 			url: "https://github.com/aadisang/open-attendance",
 		},
 		{
 			name: "Hand Wave",
 			description:
 				"A simple real-time ASL translation app built with an MiCT-based model. Presented to NBC and the Texas School for the Deaf.",
+			mobileDescription:
+				"Real-time ASL translation. Presented to NBC and the Texas School for the Deaf.",
 			url: "https://handwave.sh",
 		},
 		{
 			name: "Storm Shield",
 			description:
 				"A mobile app streamlining volunteer coordination and recruitment for organizations, such as in disaster-response scenarios. Got to demo at the U.S. Capitol and to my congressman (Rep. Self).",
+			mobileDescription:
+				"Volunteer coordination for disaster response. Demoed at the U.S. Capitol.",
 			url: "https://apps.apple.com/us/app/storm-shield-volunteer/id6744670006",
 		},
 	],

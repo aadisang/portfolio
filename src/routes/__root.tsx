@@ -44,25 +44,8 @@ export const Route = createRootRoute({
 				type: "text/plain",
 				title: "Portfolio summary for agents",
 			},
-			{
-				rel: "preload",
-				href: "/fonts/Satoshi-Variable.woff2",
-				as: "font",
-				type: "font/woff2",
-				crossOrigin: "anonymous",
-			},
 			{ rel: "stylesheet", href: appCss },
 			{ rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
-		],
-		styles: [
-			{
-				children: `@font-face {
-	font-family: "Satoshi Web";
-	src: url("/fonts/Satoshi-Variable.woff2") format("woff2");
-	font-weight: 300 900;
-	font-display: optional;
-}`,
-			},
 		],
 	}),
 	errorComponent: ({ error }) => (

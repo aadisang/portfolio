@@ -1,160 +1,169 @@
 @import "tailwindcss";
 @custom-variant pointer-fine (@media (hover: hover) and (pointer: fine));
 
+/* Embed the font to avoid a second request. `optional` can leave cold visits
+   in the fallback font even after Satoshi finishes decoding. */
+@font-face {
+	font-family: "Satoshi Web";
+	src: url("./assets/fonts/Satoshi-Variable.woff2?inline") format("woff2");
+	font-weight: 300 900;
+	font-style: normal;
+	font-display: block;
+}
+
 @theme {
-    --font-sans:
-        "Satoshi Web", ui-sans-serif, system-ui, -apple-system,
-        BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    --text-xs: 0.75rem;
-    --text-sm: 0.875rem;
-    --text-base: 1rem;
-    --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+	--font-sans:
+		"Satoshi Web", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+		"Segoe UI", Roboto, sans-serif;
+	--text-xs: 0.75rem;
+	--text-sm: 0.875rem;
+	--text-base: 1rem;
+	--ease-out: cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 @theme inline {
-    --color-background: var(--background);
-    --color-foreground: var(--foreground);
-    --color-muted-foreground: var(--muted-foreground);
-    --color-border: var(--border);
-    --color-ring: var(--ring);
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--color-muted-foreground: var(--muted-foreground);
+	--color-border: var(--border);
+	--color-ring: var(--ring);
 }
 
 :root {
-    --background: oklch(0.177 0.002 106.604);
-    --foreground: oklch(0.949 0.003 106.45);
-    --muted-foreground: oklch(0.628 0.013 101.615);
-    --border: oklch(0.252 0.002 106.532);
-    --ring: oklch(0.401 0.007 95.225);
-    --hover-overlay: oklch(1 0 0 / 0.031);
-    --selection-background: oklch(0.869 0.004 56.366);
-    --selection-foreground: oklch(0.177 0.002 106.604);
+	--background: oklch(0.177 0.002 106.604);
+	--foreground: oklch(0.949 0.003 106.45);
+	--muted-foreground: oklch(0.628 0.013 101.615);
+	--border: oklch(0.252 0.002 106.532);
+	--ring: var(--muted-foreground);
+	--hover-overlay: oklch(1 0 0 / 0.031);
+	--selection-background: oklch(0.869 0.004 56.366);
+	--selection-foreground: oklch(0.177 0.002 106.604);
 }
 
 @layer base {
-    html {
-        color-scheme: dark;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
+	html {
+		color-scheme: dark;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
 
-    body {
-        background-color: var(--background);
-        color: var(--foreground);
-        font-size: var(--text-sm);
-        line-height: 1.6;
-        font-synthesis: none;
-        touch-action: manipulation;
-    }
+	body {
+		background-color: var(--background);
+		color: var(--foreground);
+		font-size: var(--text-sm);
+		line-height: 1.6;
+		font-synthesis: none;
+		touch-action: manipulation;
+	}
 
-    h1,
-    h2,
-    h3 {
-        text-wrap: balance;
-    }
+	h1,
+	h2,
+	h3 {
+		text-wrap: balance;
+	}
 
-    ::selection {
-        background-color: var(--selection-background);
-        color: var(--selection-foreground);
-    }
+	::selection {
+		background-color: var(--selection-background);
+		color: var(--selection-foreground);
+	}
 }
 
 @layer utilities {
-    .focus-ring {
-        border-radius: var(--radius-sm);
+	.focus-ring {
+		border-radius: var(--radius-sm);
 
-        &:focus-visible {
-            outline: none;
-            box-shadow:
-                0 0 0 2px var(--background),
-                0 0 0 4px var(--ring);
-        }
-    }
+		&:focus-visible {
+			outline: none;
+			box-shadow:
+				0 0 0 2px var(--background),
+				0 0 0 4px var(--ring);
+		}
+	}
 
-    .link-muted {
-        color: var(--muted-foreground);
-        transition: color 150ms ease;
+	.link-muted {
+		color: var(--muted-foreground);
+		transition: color 150ms ease;
 
-        @media (hover: hover) and (pointer: fine) {
-            &:hover {
-                color: var(--foreground);
-            }
-        }
-    }
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				color: var(--foreground);
+			}
+		}
+	}
 
-    .press-scale {
-        transition: transform 150ms var(--ease-out);
+	.press-scale {
+		transition: transform 150ms var(--ease-out);
 
-        &:active {
-            transform: scale(0.97);
-        }
-    }
+		&:active {
+			transform: scale(0.97);
+		}
+	}
 
-    @media (hover: hover) and (pointer: fine) {
-        .hover-slide-in {
-            opacity: 0;
-            transform: scale(0.25);
-            filter: blur(4px);
-            transition:
-                opacity 200ms var(--ease-out),
-                transform 200ms var(--ease-out),
-                filter 200ms var(--ease-out);
-        }
+	@media (hover: hover) and (pointer: fine) {
+		.hover-slide-in {
+			opacity: 0;
+			transform: scale(0.25);
+			filter: blur(4px);
+			transition:
+				opacity 200ms var(--ease-out),
+				transform 200ms var(--ease-out),
+				filter 200ms var(--ease-out);
+		}
 
-        .group:is(:hover, :focus-visible) .hover-slide-in {
-            opacity: 1;
-            transform: scale(1);
-            filter: blur(0);
-        }
+		.group:is(:hover, :focus-visible) .hover-slide-in {
+			opacity: 1;
+			transform: scale(1);
+			filter: blur(0);
+		}
 
-        .hover-underline {
-            position: relative;
-            display: inline-block;
+		.hover-underline {
+			position: relative;
+			display: inline-block;
 
-            &::after {
-                position: absolute;
-                inset-inline: 0;
-                bottom: -2px;
-                height: 1px;
-                content: "";
-                background-color: currentColor;
-                transform: scaleX(0);
-                transform-origin: left;
-                transition: transform 180ms ease;
-            }
-        }
+			&::after {
+				position: absolute;
+				inset-inline: 0;
+				bottom: -2px;
+				height: 1px;
+				content: "";
+				background-color: currentColor;
+				transform: scaleX(0);
+				transform-origin: left;
+				transition: transform 180ms ease;
+			}
+		}
 
-        .group:is(:hover, :focus-visible) .hover-underline::after {
-            transform: scaleX(1);
-        }
-    }
+		.group:is(:hover, :focus-visible) .hover-underline::after {
+			transform: scaleX(1);
+		}
+	}
 
-    @media not all and (hover: hover) and (pointer: fine) {
-        .hover-slide-in {
-            display: none;
-        }
-    }
+	@media not all and (hover: hover) and (pointer: fine) {
+		.hover-slide-in {
+			display: none;
+		}
+	}
 
-    @media (prefers-reduced-motion: reduce) {
-        .link-muted {
-            transition: none;
-        }
+	@media (prefers-reduced-motion: reduce) {
+		.link-muted {
+			transition: none;
+		}
 
-        .press-scale,
-        .press-scale:active {
-            transition: none;
-            transform: none;
-        }
+		.press-scale,
+		.press-scale:active {
+			transition: none;
+			transform: none;
+		}
 
-        .hover-slide-in,
-        .group:is(:hover, :focus-visible) .hover-slide-in {
-            transform: none;
-            filter: none;
-            transition: none;
-        }
+		.hover-slide-in,
+		.group:is(:hover, :focus-visible) .hover-slide-in {
+			transform: none;
+			filter: none;
+			transition: none;
+		}
 
-        .hover-underline::after {
-            transition: none;
-        }
-    }
-
+		.hover-underline::after {
+			transition: none;
+		}
+	}
 }

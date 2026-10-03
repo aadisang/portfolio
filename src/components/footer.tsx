@@ -10,7 +10,7 @@ export default function Footer({ socialProfiles, contactEmail }: FooterProps) {
 	return (
 		<footer>
 			<hr className="border-border" />
-			<div className="flex items-center justify-between pt-10 lg:pt-8">
+			<div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-2 pt-10 lg:pt-8">
 				<a
 					href={`mailto:${contactEmail}`}
 					className="inline-flex min-h-11 items-center text-sm link-muted press-scale focus-ring"
@@ -20,7 +20,10 @@ export default function Footer({ socialProfiles, contactEmail }: FooterProps) {
 						{contactEmail.replace("@", " [at] ").replace(/\./g, " [dot] ")}
 					</span>
 				</a>
-				<nav aria-label="Social links" className="flex items-center gap-4">
+				<nav
+					aria-label="Social links"
+					className="flex flex-wrap items-center gap-x-4 gap-y-2"
+				>
 					{socialProfiles.map((socialProfile) => (
 						<SocialLink key={socialProfile.url} {...socialProfile} />
 					))}

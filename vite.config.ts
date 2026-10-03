@@ -1,10 +1,11 @@
 import { fileURLToPath, URL } from "node:url";
+import babel from "@rolldown/plugin-babel";
 import tailwindcss from "@tailwindcss/vite";
 import { devtools } from "@tanstack/devtools-vite";
 import { tanstackStart } from "@tanstack/react-start/plugin/vite";
-import viteReact from "@vitejs/plugin-react";
+import viteReact, { reactCompilerPreset } from "@vitejs/plugin-react";
 import { nitro } from "nitro/vite";
-import { loadEnv } from "vite";
+import { loadEnv } from "vite-plus";
 import { defineConfig } from "vite-plus";
 
 const env = loadEnv(process.env.NODE_ENV!, process.cwd(), "");
@@ -16,7 +17,6 @@ const toolingIgnorePatterns = [
 	".zed/**",
 	"dist/**",
 	"src/routeTree.gen.ts",
-	"src/styles.css",
 ];
 
 const config = defineConfig({
@@ -26,10 +26,20 @@ const config = defineConfig({
 		useTabs: true,
 	},
 	staged: {
-		"*": "vp check --fix",
+		"*.{js,jsx,ts,tsx}": "vp check --fix",
+		"*.{css,json,jsonc,md,mdx,yaml,yml}": "vp fmt",
 	},
 	lint: {
 		ignorePatterns: toolingIgnorePatterns,
+		plugins: [
+			"import",
+			"jsx-a11y",
+			"oxc",
+			"promise",
+			"react",
+			"typescript",
+			"unicorn",
+		],
 		options: {
 			typeAware: true,
 			typeCheck: true,
@@ -73,10 +83,9 @@ const config = defineConfig({
 				host: env.VITE_SITE_URL,
 			},
 		}),
-		viteReact({
-			babel: {
-				plugins: ["babel-plugin-react-compiler"],
-			},
+		viteReact(),
+		babel({
+			presets: [reactCompilerPreset()],
 		}),
 	],
 });

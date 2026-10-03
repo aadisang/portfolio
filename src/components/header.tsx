@@ -22,6 +22,11 @@ export default function Header({ displayName, headline }: HeaderProps) {
 						>
 							{seg.text}
 						</Link>
+					) : seg.mobileText ? (
+						<span key={seg.text}>
+							<span className="sm:hidden">{seg.mobileText}</span>
+							<span className="hidden sm:inline">{seg.text}</span>
+						</span>
 					) : (
 						seg.text
 					),

@@ -4,8 +4,8 @@ A TanStack Start portfolio with static prerendering and local TypeScript-backed 
 
 ## Prerequisites
 
-- Node.js 20+
-- pnpm 9+
+- Node.js 22.12+
+- pnpm 11+
 
 ## Development
 
@@ -31,3 +31,17 @@ pnpm preview
 ```
 
 `pnpm build` prerenders the static routes discovered by TanStack Start.
+
+## Quality
+
+Vite+ provides the project tooling, including Oxlint, Oxfmt, and type-aware
+TypeScript checks:
+
+```bash
+pnpm check
+pnpm lint
+pnpm format:check
+pnpm typecheck
+```
+
+The pre-commit hook runs the relevant Vite+ checks on staged files.

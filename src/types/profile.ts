@@ -10,6 +10,7 @@ export type WorkExperience = {
 export type ProjectLink = {
 	name: string;
 	description: string;
+	mobileDescription?: string;
 	url: string;
 };
 
@@ -22,6 +23,7 @@ import type { FileRouteTypes } from "@/routeTree.gen";
 
 export type HeadlineSegment = {
 	text: string;
+	mobileText?: string;
 	to?: FileRouteTypes["to"];
 };
 

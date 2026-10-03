@@ -31,7 +31,16 @@ export default function Projects({ items }: ProjectsProps) {
 							</svg>
 						</div>
 						<p className="mt-1 text-sm leading-relaxed text-pretty text-muted-foreground sm:line-clamp-2">
-							{project.description}
+							{project.mobileDescription ? (
+								<>
+									<span className="sm:hidden">{project.mobileDescription}</span>
+									<span className="hidden sm:inline">
+										{project.description}
+									</span>
+								</>
+							) : (
+								project.description
+							)}
 						</p>
 					</a>
 				</li>
