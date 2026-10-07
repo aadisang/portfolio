@@ -72,8 +72,10 @@
 	.focus-ring {
 		border-radius: var(--radius-sm);
 
-		&:focus-visible {
-			outline: none;
+		&:focus-visible,
+		&:has(:focus-visible) {
+			outline: 2px solid transparent;
+			outline-offset: 2px;
 			box-shadow:
 				0 0 0 2px var(--background),
 				0 0 0 4px var(--ring);
@@ -110,7 +112,7 @@
 				filter 200ms var(--ease-out);
 		}
 
-		.group:is(:hover, :focus-visible) .hover-slide-in {
+		.group:is(:hover, :focus-within) .hover-slide-in {
 			opacity: 1;
 			transform: scale(1);
 			filter: blur(0);
@@ -133,7 +135,7 @@
 			}
 		}
 
-		.group:is(:hover, :focus-visible) .hover-underline::after {
+		.group:is(:hover, :focus-within) .hover-underline::after {
 			transform: scaleX(1);
 		}
 	}
@@ -156,7 +158,7 @@
 		}
 
 		.hover-slide-in,
-		.group:is(:hover, :focus-visible) .hover-slide-in {
+		.group:is(:hover, :focus-within) .hover-slide-in {
 			transform: none;
 			filter: none;
 			transition: none;
