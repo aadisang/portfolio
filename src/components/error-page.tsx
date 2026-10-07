@@ -9,7 +9,7 @@ export default function ErrorPage({ title, description }: ErrorPageProps) {
 	return (
 		<main
 			id="main-content"
-			className="mx-auto flex min-h-dvh w-full max-w-2xl flex-col items-center justify-center px-6 pt-12 pb-8 text-center lg:max-w-3xl lg:py-8"
+			className="mx-auto flex min-h-svh w-full max-w-2xl flex-col items-center justify-center px-6 pt-12 pb-8 text-center lg:max-w-3xl lg:py-8"
 		>
 			<div>
 				<h1 className="text-base font-semibold tracking-tight">{title}</h1>
