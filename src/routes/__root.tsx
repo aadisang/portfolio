@@ -51,7 +51,11 @@ export const Route = createRootRoute({
 	errorComponent: ({ error }) => (
 		<ErrorPage
 			title="Something went wrong"
-			description={error.message || "An unexpected error occurred."}
+			description={
+				error instanceof Error && error.message
+					? error.message
+					: "An unexpected error occurred."
+			}
 		/>
 	),
 	notFoundComponent: () => <NotFound />,
